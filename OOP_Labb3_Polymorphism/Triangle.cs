@@ -60,7 +60,7 @@
         // Only works for right-angled triangles
         public override double Perimeter()
         {
-            double hypotenuse = Math.Sqrt(Math.Pow(Base, 2) + Math.Pow(Height, 2)); // Pythagoras sats
+            double hypotenuse = Math.Sqrt(Math.Pow(Base, 2) + Math.Pow(Height, 2)); // Pythagorean theorem
             return Base + Height + hypotenuse;
         }
 

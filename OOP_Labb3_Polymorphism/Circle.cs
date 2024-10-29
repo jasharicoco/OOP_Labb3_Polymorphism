@@ -2,9 +2,13 @@
 {
     internal class Circle : Geometry
     {
+        // Overriding ToString and calling it the shape of the class makes presentation easier.
         public override string ToString() => "Circle";
         public int id { get; }
         private double _radius;
+        // Getters and setters are not neccessary to ensure positive value for radius, since the method "CreateCircle"
+        // also ensures positive user input. But these getters and setters were made before i decided to make the application-program
+        // so i will leave them here as practice. Same goes for every other get;set; in the other classes.
         public double Radius
         {
             get { return _radius; }
