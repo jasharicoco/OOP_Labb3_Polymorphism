@@ -1,6 +1,9 @@
 ﻿namespace OOP_Labb3_Polymorphism
 {
-    internal class Geometry
+    internal abstract class Geometry
     {
+        public abstract double Area();
+
+
     }
 }
