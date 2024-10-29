@@ -3,6 +3,7 @@
     internal class Rectangle : Geometry
     {
         public override string ToString() => "Rectangle";
+        public int id;
         private double _base;
         private double _height;
         public double Base
@@ -44,8 +45,9 @@
             Height = 3;
         }
 
-        public Rectangle(double _base, double height)
+        public Rectangle(int id, double _base, double height)
         {
+            this.id = id;
             Base = _base;
             Height = height;
         }
@@ -58,6 +60,11 @@
         public override double Perimeter()
         {
             return (Base * 2) + (Height * 2);
+        }
+
+        public override string Present()
+        {
+            return $"Rectangle {id}";
         }
 
     }

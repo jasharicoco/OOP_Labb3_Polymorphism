@@ -3,6 +3,7 @@
     internal class Square : Geometry
     {
         public override string ToString() => "Square";
+        public int id;
         private double _side;
         public double Side
         {
@@ -26,8 +27,9 @@
             Side = 9;
         }
 
-        public Square(double side)
+        public Square(int id, double side)
         {
+            this.id = id;
             Side = side;
         }
 
@@ -39,6 +41,11 @@
         public override double Perimeter()
         {
             return (Side * 4);
+        }
+
+        public override string Present()
+        {
+            return $"Square {id}";
         }
 
     }

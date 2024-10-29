@@ -3,6 +3,7 @@
     internal class Circle : Geometry
     {
         public override string ToString() => "Circle";
+        public int id { get; }
         private double _radius;
         public double Radius
         {
@@ -26,8 +27,9 @@
             Radius = 4;
         }
 
-        public Circle(double radius)
+        public Circle(int id, double radius)
         {
+            this.id = id;
             Radius = radius;
         }
 
@@ -41,5 +43,9 @@
             return Radius * 2 * Math.PI;
         }
 
+        public override string Present()
+        {
+            return $"Circle {id}";
+        }
     }
 }

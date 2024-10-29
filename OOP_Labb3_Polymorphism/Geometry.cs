@@ -7,5 +7,6 @@
         // shape-related code for their respectice Area and Perimeter calculations.
         public abstract double Area();
         public abstract double Perimeter();
+        public abstract string Present();
     }
 }
