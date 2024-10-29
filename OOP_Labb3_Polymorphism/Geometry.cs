@@ -1,12 +1,17 @@
 ﻿namespace OOP_Labb3_Polymorphism
 {
+    // Abstract base class.
+    // This class cannot be instantiated directly. Instead, 
+    // it serves as a template for derived shape classes.
     internal abstract class Geometry
     {
-        // We are working with abstract here because we will not be creating any instances of "Geometry"
-        // other than the ones coming from the sub-classes. Abstract methods force us to write specific
-        // shape-related code for their respectice Area and Perimeter calculations.
+        // Abstract methods to calculate the area/perimeter of the shape.
+        // Derived classes must implement this method with 
+        // their specific calculation logic.
         public abstract double Area();
+
         public abstract double Perimeter();
+
         public abstract string Present();
     }
 }
