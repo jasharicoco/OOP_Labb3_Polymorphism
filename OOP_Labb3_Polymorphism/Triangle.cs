@@ -1,8 +1,8 @@
 ﻿namespace OOP_Labb3_Polymorphism
 {
-    internal class Rectangle : Geometry
+    internal class Triangle : Geometry
     {
-        public override string ToString() => "Rectangle";
+        public override string ToString() => "Triangle";
         private double _base;
         private double _height;
         public double Base
@@ -12,7 +12,7 @@
             {
                 if (value < 0)
                 {
-                    Console.WriteLine("Invalid value for base in Rectangle. Setting to default (0).");
+                    Console.WriteLine("Invalid value for base in Triangle. Setting to default (0).");
                     _base = 0; // Set to a default value instead of throwing an exception
                 }
                 else
@@ -28,7 +28,7 @@
             {
                 if (value < 0)
                 {
-                    Console.WriteLine("Invalid value for height. Setting to default (0).");
+                    Console.WriteLine("Invalid value for height in Triangle. Setting to default (0).");
                     _height = 0; // Set to a default value instead of throwing an exception
                 }
                 else
@@ -38,13 +38,13 @@
             }
         }
 
-        public Rectangle()
+        public Triangle()
         {
-            Base = 5;
-            Height = 3;
+            Base = 4;
+            Height = 10;
         }
 
-        public Rectangle(double _base, double height)
+        public Triangle(double _base, double height)
         {
             Base = _base;
             Height = height;
@@ -52,12 +52,14 @@
 
         public override double Area()
         {
-            return Base * Height;
+            return (Base * Height) / 2;
         }
 
+        // Only works for right-angled triangles
         public override double Perimeter()
         {
-            return (Base * 2) + (Height * 2);
+            double hypotenuse = Math.Sqrt(Math.Pow(Base, 2) + Math.Pow(Height, 2)); // Pythagoras sats
+            return Base + Height + hypotenuse;
         }
 
     }
