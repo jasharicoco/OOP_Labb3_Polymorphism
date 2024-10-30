@@ -222,22 +222,24 @@
             void SortAndDisplayArea()
             {
                 List<Geometry> sortedByArea = shapes.OrderBy(shape => shape.Area()).ToList();
+                Console.Clear();
                 Console.WriteLine("Shapes sorted by area:");
                 foreach (Geometry shape in sortedByArea)
                 {
                     // Running one single method on all objects, because they have "Geometry Class" in common.
-                    Console.WriteLine($"{shape.Present()} has an area of {shape.Area():F2}");
+                    Console.WriteLine($"{shape.Present()} has an area of {shape.Area():F2} cm²");
                 }
             }
 
             void SortAndDisplayPerimeter()
             {
                 List<Geometry> sortedByPerimeter = shapes.OrderBy(shape => shape.Perimeter()).ToList();
+                Console.Clear();
                 Console.WriteLine("Shapes sorted by perimeter:");
                 foreach (Geometry shape in sortedByPerimeter)
                 {
                     // Running one single method on all objects, because they have "Geometry Class" in common.
-                    Console.WriteLine($"{shape.Present()} has a perimeter of {shape.Perimeter():F2}");
+                    Console.WriteLine($"{shape.Present()} has a perimeter of {shape.Perimeter():F2} cm");
                 }
             }
 
