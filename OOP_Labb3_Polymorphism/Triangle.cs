@@ -24,7 +24,7 @@
         }
         public double Height
         {
-            get { return _base; }
+            get { return _height; }
             set
             {
                 if (value < 0)
@@ -45,11 +45,11 @@
             Height = 10;
         }
 
-        public Triangle(int id, double _base, double height)
+        public Triangle(int id, double triangleBase, double triangleHeight)
         {
             this.id = id;
-            Base = _base;
-            Height = height;
+            Base = triangleBase;
+            Height = triangleHeight;
         }
 
         public override double Area()

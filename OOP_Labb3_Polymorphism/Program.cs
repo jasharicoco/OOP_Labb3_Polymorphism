@@ -93,13 +93,13 @@
             void CreateTriangle()
             {
                 Console.WriteLine("Enter base: ");
-                double _base = 0;
+                double triangleBase = 0;
                 while (true)
                 {
                     string input = Console.ReadLine();
-                    if (double.TryParse(input, out _base))
+                    if (double.TryParse(input, out triangleBase))
                     {
-                        if (_base < 0)
+                        if (triangleBase < 0)
                         {
                             Console.WriteLine("Please enter a valid number.");
                         }
@@ -117,9 +117,9 @@
                 while (true)
                 {
                     string input = Console.ReadLine();
-                    if (double.TryParse(input, out double height))
+                    if (double.TryParse(input, out double triangleHeight))
                     {
-                        if (height < 0)
+                        if (triangleHeight < 0)
                         {
                             Console.WriteLine("Please enter a number greater than or equal to 0.");
                         }
@@ -127,8 +127,8 @@
                         {
                             triangleCount++;
                             Console.Clear();
-                            Console.WriteLine($"Triangle nr. {triangleCount} created with base: {_base} cm and height: {height} cm");
-                            Geometry triangle = new Triangle(triangleCount, _base, height);
+                            Console.WriteLine($"Triangle nr. {triangleCount} created with base: {triangleBase} cm and height: {triangleHeight} cm");
+                            Geometry triangle = new Triangle(triangleCount, triangleBase, triangleHeight);
                             shapes.Add(triangle);
                             break;
                         }
@@ -172,13 +172,13 @@
             void CreateRectangle()
             {
                 Console.WriteLine("Enter base: ");
-                double _base = 0;
+                double rectangleBase = 0;
                 while (true)
                 {
                     string input = Console.ReadLine();
-                    if (double.TryParse(input, out _base))
+                    if (double.TryParse(input, out rectangleBase))
                     {
-                        if (_base < 0)
+                        if (rectangleBase < 0)
                         {
                             Console.WriteLine("Please enter a valid number.");
                         }
@@ -196,9 +196,9 @@
                 while (true)
                 {
                     string input = Console.ReadLine();
-                    if (double.TryParse(input, out double height))
+                    if (double.TryParse(input, out double rectangleHeight))
                     {
-                        if (height < 0)
+                        if (rectangleHeight < 0)
                         {
                             Console.WriteLine("Please enter a number greater than or equal to 0.");
                         }
@@ -206,8 +206,8 @@
                         {
                             rectangleCount++;
                             Console.Clear();
-                            Console.WriteLine($"Rectangle nr. {rectangleCount} created with base: {_base} cm and height: {height} cm\n");
-                            Geometry rectangle = new Triangle(rectangleCount, _base, height);
+                            Console.WriteLine($"Rectangle nr. {rectangleCount} created with base: {rectangleBase} cm and height: {rectangleHeight} cm");
+                            Geometry rectangle = new Rectangle(rectangleCount, rectangleBase, rectangleHeight);
                             shapes.Add(rectangle);
                             break;
                         }

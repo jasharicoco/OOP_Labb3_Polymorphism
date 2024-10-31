@@ -45,11 +45,11 @@
             Height = 3;
         }
 
-        public Rectangle(int id, double _base, double height)
+        public Rectangle(int id, double rectangleBase, double rectangleHeight)
         {
             this.id = id;
-            Base = _base;
-            Height = height;
+            Base = rectangleBase;
+            Height = rectangleHeight;
         }
 
         public override double Area()
